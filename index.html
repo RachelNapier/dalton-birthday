@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dalton // 24 — Night City Uplink • built by Rachel</title>
+    <title>Dalton // 24 — Night City Uplink</title>
     <meta name="theme-color" content="#0ea5a3" />
     <meta name="description" content="A cyberpunk Edgerunners-style interactive birthday page for Dalton." />
     <!-- Simple favicon (emoji) -->
@@ -34,18 +34,11 @@
         100% { transform: translate(calc(var(--x, -50%) + var(--tx)), var(--ty)) rotate(45deg); opacity: 0; }
       }
     </style>
-  
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="apple-touch-icon" href="icon-180.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-
-</head>
+  </head>
   <body class="min-h-screen bg-black text-white">
-    <div id="root"></div>
+    <div id="root"><noscript>Please enable JavaScript to view this page.</noscript></div>
 
-    <script type="text/babel">
+    <script type="text/babel" data-presets="react">
       const { useEffect, useMemo, useRef, useState } = React;
 
       function App(){
@@ -103,7 +96,7 @@
         }
 
         // Couples mini‑chat (local only)
-        const [me, setMe] = useState("Rachel");
+        const [me, setMe] = useState("You");
         const [partner, setPartner] = useState("Dalton");
         const [msg, setMsg] = useState("");
         const [thread, setThread] = useState(() => {
@@ -139,7 +132,8 @@
                 Dalton // 24 — Night City Uplink
               </h1>
               <p className="mt-3 text-cyan-200/90 max-w-2xl">
-                I hope you have a happy birthday, <span className=\"font-semibold text-white\">Dalton ⊹ ࣪ ˖🍰₊˚⊹♡</span>
+                Happy Birthday, <span className="font-semibold text-white">Dalton</span>! This is your personal
+                Edgerunners‑style page built with love. Explore the terminals, play your song, drop memories, and unlock the secret.
               </p>
 
               {/* Countdown */}
@@ -150,16 +144,6 @@
                 <TimerCard label="Seconds" value={seconds} />
               </div>
             </header>
-            {/* Rachel Note */}
-            <section className="relative z-10 max-w-5xl mx-auto px-6 -mt-2 pb-2">
-              <div className="rounded-2xl border border-fuchsia-400/25 bg-fuchsia-500/10 p-5">
-                <h2 className="text-xl font-bold text-fuchsia-200">A Note From Rachel 💜</h2>
-                <p className="text-sm text-fuchsia-100/90 mt-2">
-                  Apologies for not having a real gift, but I hope that this brings a smileツ
-                </p>
-              </div>
-            </section>
-
 
             {/* Panels */}
             <main className="relative z-10 max-w-5xl mx-auto px-6 pb-20 grid lg:grid-cols-2 gap-6">
@@ -266,12 +250,6 @@
                 </div>
               </Panel>
 
-              
-              {/* Date Night Quest Log */}
-              <Panel title="Date Night Quest Log" subtitle="Little missions for us to complete together">
-                <QuestLog />
-              </Panel>
-
               {/* Secret Panel */}
               <Panel title="Encrypted Cache" subtitle="Crack the passcode to reveal a surprise">
                 {!unlocked ? (
@@ -346,7 +324,7 @@
                 Deploy confetti hearts 💜
               </button>
               <p className="text-xs text-white/50 mt-4">
-                Built by Rachel<𝟑
+                Built with love · Cyberpunk‑style UI · Customize colors, copy, and secrets.
               </p>
             </footer>
           </div>
@@ -432,12 +410,5 @@
       const root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(<App />);
     </script>
-  
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
-      }
-    </script>
-
-</body>
+  </body>
 </html>
