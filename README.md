@@ -1,27 +1,14 @@
-# Dalton // 24 — Birthday Web App
+# Happy Birthday, Dalton ⊹ ࣪ ˖🍰₊˚⊹♡
 
-**Built by Rachel<𝟑**
+Built with love by Rachel<𝟑
 
-Happy Birthday, Dalton! ⊹ ࣪ ˖🍰₊˚⊹♡
+This little app is just for you — open it up, play a song, leave notes, and smileツ
 
-This is a tiny, installable web app. Open it in your browser, play the theme song, leave notes, and check off little quests together.
+## How to keep it on your phone
+- Open the link Rachel sends you.
+- On iPhone: tap the share button, then “Add to Home Screen.”
+- On Android (Chrome): tap the three dots ⋮, then “Add to Home screen.”
 
-## How to use
-1. Open the site (GitHub Pages link).
-2. In **Theme Song Terminal**, paste a **YouTube** or **Spotify** link.
-3. Add a memory in **Memory Shards** or post in **Love Terminal**.
-4. Optional: try the secret! (hint: name + age)
-5. Save to your phone:
-   - **iPhone (Safari):** Share → Add to Home Screen
-   - **Android (Chrome):** ⋮ → Add to Home screen / Install app
+That way, it will look like your own app and be easy to open anytime.
 
-## Local-only data
-Notes, chat, and checklist save **only** in your browser (localStorage). Each device has its own saved state.
-
-## Developer notes
-- PWA manifest: `manifest.webmanifest`
-- Service worker: `sw.js`
-- Icons: PNGs in this folder (maskable icon included for Android cropping)
-- Entry point: `index.html` (same content as `index-pwa.html`)
-
-Enjoy! — Rachel
+Enjoy your special day ♡
